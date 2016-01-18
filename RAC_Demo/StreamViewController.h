@@ -6,12 +6,8 @@
 //  Copyright © 2016年 single. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-#import <ReactiveCocoa.h>
-
-@interface StreamViewController : UIViewController
-
-@property (nonatomic, strong) RACReplaySubject * subject;
+@interface StreamViewController : ViewController
 
 @end

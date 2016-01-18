@@ -8,9 +8,7 @@
 
 #import "TableViewController.h"
 
-#import "StreamViewController.h"
-#import "SignalViewController.h"
-#import "SubjectViewController.h"
+#import "ViewController.h"
 
 @interface TableViewController ()
 
@@ -18,24 +16,13 @@
 
 @implementation TableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-}
-
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     UIViewController * vc = [segue destinationViewController];
     
-    if ([vc isKindOfClass:[StreamViewController class]]) {
+    if ([vc isKindOfClass:[ViewController class]]) {
         
-        [[(StreamViewController *)vc subject] sendNext:segue.identifier];
-    } else if ([vc isKindOfClass:[SignalViewController class]]) {
-        
-        
-    } else if ([vc isKindOfClass:[SubjectViewController class]]) {
-        
-        
+        [[(ViewController *)vc subject] sendNext:segue.identifier];
     }
 }
 

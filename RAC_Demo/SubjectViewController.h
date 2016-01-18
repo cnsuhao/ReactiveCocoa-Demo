@@ -6,8 +6,8 @@
 //  Copyright © 2016年 single. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface SubjectViewController : UIViewController
+@interface SubjectViewController : ViewController
 
 @end

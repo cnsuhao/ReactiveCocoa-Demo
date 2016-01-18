@@ -6,8 +6,8 @@
 //  Copyright © 2016年 single. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ViewController.h"
 
-@interface SignalViewController : UIViewController
+@interface SignalViewController : ViewController
 
 @end

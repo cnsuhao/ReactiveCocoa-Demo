@@ -17,6 +17,7 @@
 		9C4428B41C44D62200A69561 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4428B21C44D62200A69561 /* Main.storyboard */; };
 		9C4428B61C44D62200A69561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C4428B51C44D62200A69561 /* Assets.xcassets */; };
 		9C4428B91C44D62200A69561 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C4428B71C44D62200A69561 /* LaunchScreen.storyboard */; };
+		9C7706821C4C896300D5FA09 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C7706811C4C896300D5FA09 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		9C4428B51C44D62200A69561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C4428B81C44D62200A69561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C4428BA1C44D62200A69561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C7706801C4C896300D5FA09 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C7706811C4C896300D5FA09 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A09417467AC5F7D3268015D0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		FE0978E7C8CEB9892B17B051 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +94,8 @@
 		9C4428A81C44D62200A69561 /* RAC_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9C7706801C4C896300D5FA09 /* ViewController.h */,
+				9C7706811C4C896300D5FA09 /* ViewController.m */,
 				9C1794511C4A4C6A001C2D4B /* TableViewController.h */,
 				9C1794521C4A4C6A001C2D4B /* TableViewController.m */,
 				9C1794481C4A14C8001C2D4B /* StreamViewController.h */,
@@ -239,6 +244,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C7706821C4C896300D5FA09 /* ViewController.m in Sources */,
 				9C17944D1C4A14D9001C2D4B /* SignalViewController.m in Sources */,
 				9C1794531C4A4C6A001C2D4B /* TableViewController.m in Sources */,
 				9C17944A1C4A14C9001C2D4B /* StreamViewController.m in Sources */,

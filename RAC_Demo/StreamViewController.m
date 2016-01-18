@@ -8,8 +8,6 @@
 
 #import "StreamViewController.h"
 
-#import <objc/runtime.h>
-
 @interface StreamViewController ()
 
 @property (weak, nonatomic) IBOutlet UITextField *input;
@@ -21,28 +19,6 @@
 @end
 
 @implementation StreamViewController
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    @weakify(self)
-    [self.subject subscribeNext:^(id x) {
-        
-        @strongify(self)
-        if (!class_respondsToSelector([self class], NSSelectorFromString(x))) {
-            class_addMethod([self class], NSSelectorFromString(x), (IMP)addEmptyMethod, "v@:");
-        }
-        
-        IMP imp = class_getMethodImplementation([self class], NSSelectorFromString(x));
-        void(* function)(id, SEL) = (void *)imp;
-        function(self, NSSelectorFromString(x));
-    }];
-}
-
-void addEmptyMethod(id self, SEL sel)
-{
-    NSLog(@"功能未实现");
-}
 
 #pragma mark
 #pragma mark - fliter/ignore
@@ -276,14 +252,6 @@ void addEmptyMethod(id self, SEL sel)
     [skipUntil subscribeNext:^(id x) {
         NSLog(@"skipUntil: %@", x);
     }];
-}
-
-- (RACReplaySubject *)subject
-{
-    if (!_subject) {
-        _subject = [RACReplaySubject subject];
-    }
-    return _subject;
 }
 
 @end
